@@ -25,3 +25,7 @@
   -Fetch data for trailer videa & updated store
   -Embeded youtube video and make it autoplay in mute
   -Provided tailwind classes to main container
+  -Build secondary container
+  -Build movie list & movie card
+  -Added TMDB image url
+  -Created usePopular custom hook

@@ -41,7 +41,7 @@ const Header = () => {
         <img className='w-44' src={logo} alt="Netflix logo"/>
       {user && <div className='flex p-2'>
       {/* <img className='w-10 m-2' src={userProfileImage} alt="userIcon"/> */}
-      <button onClick={handleSignout} className='text-red-700 font-bold mr-4'> <FaceIcon/> (Sign out)</button>
+      <button onClick={handleSignout} className='text-red-700 font-bold mr-4'> <FaceIcon style={{marginBottom:'2px'}}/> (Sign out)</button>
     </div>}
     </div>
     

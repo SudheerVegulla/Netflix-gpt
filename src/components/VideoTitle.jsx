@@ -3,7 +3,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 const VideoTitle = ({title,description}) => {
   return (
-    <div className='pt-[15%] px-10 absolute text-white bg-gradient-to-r from-black w-screen aspect-video'>
+    <div className='pt-[10%] px-10 absolute text-white bg-gradient-to-r from-black w-screen aspect-video'>
         <h1 className='text-6xl font-bold'>{title}</h1>
         <p className='text-lg py-4 w-1/4'>{description}</p>
         <div>
