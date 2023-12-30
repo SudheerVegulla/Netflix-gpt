@@ -13,3 +13,15 @@
   -created redux store with user slice
   -implemented signOut page
   -Update profile
+  -Bug fic for updating display name & profile image
+  -Bug fix like if we change url without login it is moving into page and vice versa
+  -Unsubscribed to onAuthState change callback
+  -Added hardcoded values to constants.js file
+  -Registered for TMDB api & get access token
+  -Get data from TMDB now playing movies api
+  -Created custom hook for nowPlaying movies
+  -Create movie slice and updated store
+  -Planning for main container & secondary container
+  -Fetch data for trailer videa & updated store
+  -Embeded youtube video and make it autoplay in mute
+  -Provided tailwind classes to main container

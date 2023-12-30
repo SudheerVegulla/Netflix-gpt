@@ -6,9 +6,10 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import { userProfileImage } from '../utils/constants';
 
 const Login = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const dispatch = useDispatch();
     const [emailOrPhNo,setEmailOrPhNo] = useState('');
     const [password,setPassword] = useState('');
@@ -27,12 +28,12 @@ const Login = () => {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-updateProfile(user, {
-  displayName: name, photoURL: "https://webstockreview.net/images/user-icon-png-4.png"
+updateProfile(user, {  //this change is for updating  display name
+  displayName: name, photoURL: userProfileImage
 }).then(() => {
     const {uid,email,displayName,photoURL} = auth.currentUser;
-    dispatch(addUser({uid:uid,email:email,displayName :displayName,photoURL:photoURL})); 
-    navigate("/browse");
+    dispatch(addUser({uid:uid,email:email,displayName :displayName,photoURL:photoURL})); // bug fix for display name & profile image.calling this action here for updating DN and PI.
+    // navigate("/browse");
   // Profile updated!
   // ...
 }).catch((error) => {
@@ -57,7 +58,7 @@ updateProfile(user, {
     // Signed in 
     const user = userCredential.user;
     // console.log(user);
-    navigate("/browse");
+    // navigate("/browse");
     // ...
   })
   .catch((error) => {
