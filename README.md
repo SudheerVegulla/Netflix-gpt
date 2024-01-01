@@ -29,3 +29,5 @@
   -Build movie list & movie card
   -Added TMDB image url
   -Created usePopular custom hook
+  -GPT search feature
+  -Multi-language feature in our app

@@ -6,7 +6,7 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
-import { userProfileImage } from '../utils/constants';
+import { backgroundImage, userProfileImage } from '../utils/constants';
 
 const Login = () => {
     // const navigate = useNavigate();
@@ -74,10 +74,10 @@ updateProfile(user, {  //this change is for updating  display name
     }
 
   return (
-    <div className=''>
+    <div>
         <Header/>
         <div className='absolute'>
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/6b2842d1-2339-4f08-84f6-148e9fcbe01b/IN-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background image for login page"/>
+            <img src={backgroundImage} alt="background image for login page"/>
         </div>
         <form className='w-4/12 absolute bg-black left-0 right-0 m-auto my-36 p-12 text-white flex justify-center items-center flex-col bg-opacity-80 '>
             <h1 className='text-3xl py-4 px-1 self-start  font-bold '>{isSignInForm ? "Sign In" : "Sign up"}</h1>
