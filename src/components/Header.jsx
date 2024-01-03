@@ -48,8 +48,9 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   }
   return (
-    <div className='absolute px-3 py-3 bg-gradient-to-b from-black z-10 flex justify-between w-screen'>
-        <img className='w-44' src={logo} alt="Netflix logo"/>
+    // default styling is for mobile,if it is greater than md then desktop styling will apply
+    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row  justify-between w-screen'>
+        <img className='w-44 mx-auto md:mx-0  ' src={logo} alt="Netflix logo"/> 
       {user && <div className='flex p-2'>
         {searchButtonView.toggleSearchView && <select onChange={handleSelectedLang} className='bg-lime-100  rounded-lg mx-4 px-4'>{supported_languages.map(lang => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}</select>}
         {/* <select>
